@@ -23,3 +23,23 @@ myImage.onclick = function () {
     myImage.setAttribute('src', 'images/1.jpg');
   }
 }
+
+var myButton = document.querySelector('button');
+var myH2 = document.querySelector('h2');
+
+function setName() {
+  var myName = prompt('Please enter your name.');
+  localStorage.setItem('name', myName);
+  myH2.textContent = 'Special Hello to you, ' + myName;
+}
+
+if(!localStorage.getItem('name')){
+  setName();
+} else {
+  var storedName = localStorage.getItem('name');
+  myH2.textContent = 'Special Hello to you, ' + storedName;
+}
+
+myButton.onclick = function () {
+  setName();
+}
