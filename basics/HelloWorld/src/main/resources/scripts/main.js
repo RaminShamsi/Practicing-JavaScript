@@ -3,8 +3,8 @@
  */
 
 var myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello World!';
-if (myHeading.textContent === 'Hello World!') {
+myHeading.textContent = 'Hello World! click on photo to change it.';
+if (myHeading.textContent === 'Hello World! click on photo to change it.') {
   alert('Yeah, that is hello world');
 } else {
   alert('Nooo, come on!');
